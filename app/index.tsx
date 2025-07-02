@@ -6,7 +6,7 @@ import { apiLoginUser } from '@/services/apiLoginUser';
 import { router } from 'expo-router';
 import { useState } from 'react';
 
-export default function IndexScreen() {
+export default function LoginScreen() {
 
   const [email, setemail] = useState('')
   const [password, setpassword] = useState('')  
@@ -19,9 +19,7 @@ export default function IndexScreen() {
       const iduser= await apiLoginUser(email,password);    
       
       if (iduser!=-1) {
-
-        router.push('/(tabs)')
-        
+        router.replace('/(tabs)/dashboard'); // Navigate to the dashboard screen
       }                  
         //router.navigate('/dashboard')         
       else 
@@ -54,8 +52,15 @@ export default function IndexScreen() {
       <DefaultRoundedButton
           text='INICIAR SESION'
           onPress={() => loginnow()}     
-          backgroundColor='#034f84'               
+          backgroundColor='#ff7b25'               
       />
+
+        <DefaultRoundedButton
+          text='Ver Dispositivo'
+          onPress={() => router.push('/infodevice')}              
+          backgroundColor='#6b5b95'               
+        />
+
         </View>
       </View>
      
