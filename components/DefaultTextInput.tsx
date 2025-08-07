@@ -1,11 +1,11 @@
-import { StyleSheet, View, Image, TextInput, KeyboardType } from 'react-native';
+import { Image, KeyboardType, StyleSheet, TextInput, View } from 'react-native';
 
 interface Props {
     placeholder: string,
     value: string,
     onChangeText: (text: string) => void,
     keyboardType?: KeyboardType,
-    icon: any,
+    icon?: any,
     secureTextEntry?: boolean
 }
 

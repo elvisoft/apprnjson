@@ -1,10 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
-
 import DefaultRoundedButton from '@/components/DefaultRoundedButton';
 import DefaultTextInput from '@/components/DefaultTextInput';
 import { apiLoginUser } from '@/services/apiLoginUser';
 import { router } from 'expo-router';
 import { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function LoginScreen() {
 
@@ -56,8 +55,8 @@ export default function LoginScreen() {
       />
 
         <DefaultRoundedButton
-          text='Ver Dispositivo'
-          onPress={() => router.push('/infodevice')}              
+          text='Registrarse'
+          onPress={() => router.push('/register')}              
           backgroundColor='#6b5b95'               
         />
 
